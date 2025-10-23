@@ -1,79 +1,116 @@
-Game Engine Testing Suite
-Comprehensive unit and integration testing framework for the game engine.
-Test Organization
-Unit Tests
-Each component has its own test file that tests individual functionality in isolation:
+# Goblin Slayer
 
-test_entity.cpp - Tests the base Entity class
+A wave-based survival game built with C++ and SFML, featuring multiple character classes, progressive difficulty, and a competitive leaderboard system.
 
-Entity creation and initialization
-Health management and damage
-Death conditions
-Edge cases (overkill, zero damage, negative health)
+## 🎮 Game Overview
 
+Goblin Slayer is an action-packed survival game where players battle through increasingly difficult waves of goblin enemies. Choose your class, level up your character, and climb the leaderboard as you fight to survive!
 
-test_environment.cpp - Tests the Environment system
+### Key Features
 
-Entity spawning and removal
-Collision detection
-Position clamping
-Dead entity cleanup
-Exception handling for invalid operations
+- **Three Unique Classes**: Warrior, Wizard, and Rogue, each with distinct playstyles and abilities
+- **Class Evolution System**: Unlock powerful upgraded classes at level 10
+- **Dynamic Wave System**: Face progressively stronger enemies with boss encounters every 10 waves
+- **Experience & Leveling**: Gain XP from kills to level up and enhance your stats
+- **Persistent Leaderboard**: Track top scores across sessions
+- **Multiple Enemy Types**: Regular Goblins, armored Goblin Brutes, and powerful Goblin Lords
 
+## 🕹️ How to Play
 
-test_enemy.cpp - Tests Enemy and Goblin classes
+### Controls
+- **WASD**: Move your character
+- **Left Click**: Attack (aim with mouse)
+- **ESC**: Pause game / Return to menu
 
-Enemy creation and movement
-Attack cooldown system
-Movement toward targets
-Death conditions
+### Classes
 
+**Warrior**
+- High durability melee fighter
+- Evolves into **Knight** at level 10 with charge attack ability
 
-test_goblin_brute.cpp - Tests GoblinBrute armor mechanics
+**Wizard**
+- Ranged spellcaster with mana-based attacks
+- Evolves into **Archmage** at level 10 with devastating meteor ability
 
-Armor reduction on damage
-Minimum damage (always at least 1)
-Armor depletion
-Exception handling for negative damage
+**Rogue**
+- Fast attacker with critical hit chance
+- Evolves into **Assassin** at level 10 with invisibility and bonus damage
 
+### Enemy Types
 
-test_goblin_lord.cpp - Tests GoblinLord summoning
+- **Goblin**: Basic enemy with standard stats
+- **Goblin Brute**: Armored tank with damage reduction (appears from wave 5)
+- **Goblin Lord**: Boss enemy that summons minions (appears every 10 waves)
 
-Goblin summoning mechanics
-Maximum summon limits
-Summon cooldown system
-Death notification system
-onDeath() behavior (kills all summons)
+## 🛠️ Technical Details
 
+### Built With
+- **C++17**: Core game logic and systems
+- **SFML 2.5+**: Graphics, window management, and input handling
+- **Object-Oriented Design**: Inheritance-based class system for extensibility
 
-test_player.cpp - Tests Player classes (Warrior, Wizard, Rogue)
+### Architecture Highlights
 
-Player creation and stats
-Movement system
-Attack cooldown
-XP and leveling
-Class-specific mechanics (mana, crits, melee)
+- **Entity-Component Pattern**: Modular entity system for players and enemies
+- **Strategy Pattern**: Flexible attack system supporting multiple attack types
+- **State Machine**: Clean menu and game state management
+- **Environment System**: Collision detection and entity lifecycle management
 
+### Key Components
 
-test_controller.cpp - Tests input handling
+- **Player Classes**: Base `Player` class with derived `Warrior`, `Wizard`, and `Rogue`
+- **Enemy AI**: Movement, attack patterns, and wave-based spawning
+- **Attack System**: Projectile, melee, and special attack implementations
+- **Wave Manager**: Exponential difficulty scaling with boss encounters
+- **Leaderboard**: File-based persistence for high scores
 
-Attack input detection
-Event handling
-Mouse angle calculation
-Input reset behavior
+## 📦 Installation & Setup
 
+### Prerequisites
+- C++17 compatible compiler (GCC, Clang, MSVC)
+- SFML 2.5 or higher
+- CMake 3.10+ (recommended)
 
+### Build Instructions
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/goblin-slayer.git
+cd goblin-slayer
 
-Integration Tests
-test_integration.cpp - Tests how components work together:
+# Compile (example using g++)
+g++ -std=c++17 *.cpp -o GoblinSlayer -lsfml-graphics -lsfml-window -lsfml-system
 
-Player-Enemy collision
-Combat scenarios
-Multiple enemies in environment
-GoblinLord summoning integration
-Armor system in combat
-Player leveling system
-Wizard mana in combat
+# Run the game
+./GoblinSlayer
+```
+
+**Note**: Ensure `arial.ttf` font file is in the same directory as the executable for proper text rendering.
+
+## 🤝 Contributors
+
+This project was developed collaboratively by:
+- [@a1211368](https://github.com/a1211368)
+- [@a1969929](https://github.com/a1969929)
+
+## 📈 Future Enhancements
+
+- Additional character classes and evolution paths
+- Power-up system and item drops
+- Sound effects and background music
+- Multiplayer co-op mode
+- Steam leaderboard integration
+
+## 📄 License
+
+This project is available for educational and portfolio purposes. Please contact contributors for usage rights.
+
+## 🎯 Acknowledgments
+
+Built as a demonstration of object-oriented programming principles, game development patterns, and C++ proficiency with SFML.
+
+---
+
+*Survive the waves. Defeat the Goblin Lords. Claim your place on the leaderboard!*
 Rogue critical hits
 Enemy swarm behavior
 Player death scenarios
