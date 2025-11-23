@@ -7,15 +7,6 @@ A **C++ & SFML wave-based survival game** featuring multiple character classes, 
 ## 🎮 Game Overview
 
 **Goblin Slayer** is an action-packed survival game where you fight through endlessly escalating waves of goblins. Level up, evolve your class into stronger forms, unlock special abilities, and climb the leaderboard.
-Contributors
-
-### **This project was developed collaboratively by:**
-@a1211368
-https://github.com/a1211368
-@a1969929
-https://github.com/a1969929
-And RafiZulfiquer
----
 
 ## ✨ Key Features
 
@@ -86,6 +77,15 @@ And RafiZulfiquer
 - Wave Manager (difficulty scaling + bosses)  
 - Leaderboard system  
 
+---
+
+Contributors
+### **This project was developed collaboratively by:**
+@a1211368
+https://github.com/a1211368
+@a1969929
+https://github.com/a1969929
+And RafiZulfiquer
 ---
 
 ## 📦 Installation & Setup
