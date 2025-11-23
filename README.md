@@ -99,7 +99,7 @@ g++ -std=c++17 *.cpp -o GoblinSlayer -lsfml-graphics -lsfml-window -lsfml-system
 
 Contributors
 
-This project was developed collaboratively by:
+### **This project was developed collaboratively by:**
 @a1211368
 https://github.com/a1211368
 @a1969929
