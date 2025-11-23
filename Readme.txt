@@ -1,75 +1,115 @@
 # Goblin Slayer
 
-A wave-based survival game built with C++ and SFML, featuring multiple character classes, progressive difficulty, and a competitive leaderboard system.
+<p align="center">
+  <img src="assets/banner.png" alt="Goblin Slayer Banner" width="800">
+</p>
+
+<p align="center">
+  <b>A C++ & SFML wave-based survival game featuring evolving classes, fast combat, and competitive leaderboards.</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/C++-17-blue.svg">
+  <img src="https://img.shields.io/badge/SFML-2.5+-brightgreen.svg">
+  <img src="https://img.shields.io/badge/License-Custom-lightgrey.svg">
+  <img src="https://img.shields.io/badge/Platform-PC-orange.svg">
+</p>
+
+---
+
+## 🎮 Gameplay Preview
+
+<p align="center">
+  <img src="assets/gameplay.gif" alt="Gameplay GIF" width="600">
+</p>
+
+> *(Optional — add a gameplay GIF to `assets/gameplay.gif` to display it here.)*
+
+---
 
 ## 🎮 Game Overview
 
-Goblin Slayer is an action-packed survival game where players battle through increasingly difficult waves of goblin enemies. Choose your class, level up your character, and climb the leaderboard as you fight to survive!
+**Goblin Slayer** is an action-packed survival experience where you battle through increasingly difficult waves of goblins. Choose your class, evolve into powerful forms, unleash special abilities, and climb the leaderboard.
 
-### Key Features
+---
 
-- **Three Unique Classes**: Warrior, Wizard, and Rogue, each with distinct playstyles and abilities
-- **Class Evolution System**: Unlock powerful upgraded classes at level 10
-- **Dynamic Wave System**: Face progressively stronger enemies with boss encounters every 10 waves
-- **Experience & Leveling**: Gain XP from kills to level up and enhance your stats
-- **Persistent Leaderboard**: Track top scores across sessions
-- **Multiple Enemy Types**: Regular Goblins, armored Goblin Brutes, and powerful Goblin Lords
+## ✨ Key Features
+
+- **Three Unique Classes** — Warrior, Wizard, and Rogue  
+- **Class Evolutions at Level 10** — Knight, Archmage, Assassin  
+- **Dynamic Wave Scaling** — Bosses every 10 waves  
+- **XP & Leveling System** — Increase health, damage, speed  
+- **Persistent Leaderboard** — Scores saved locally  
+- **Multiple Enemy Types** — Goblins, Brutes, Lords, summons  
+
+---
 
 ## 🕹️ How to Play
 
 ### Controls
-- **WASD**: Move your character
-- **Left Click**: Attack (aim with mouse)
-- **ESC**: Pause game / Return to menu
+| Action | Key |
+|-------|------|
+| Move | **W, A, S, D** |
+| Attack | **Left Mouse Button** |
+| Aim | **Mouse** |
+| Pause / Menu | **ESC** |
 
-### Classes
+---
 
-**Warrior**
-- High durability melee fighter
-- Evolves into **Knight** at level 10 with charge attack ability
+## 🧙 Classes & Evolutions
 
-**Wizard**
-- Ranged spellcaster with mana-based attacks
-- Evolves into **Archmage** at level 10 with devastating meteor ability
+### 🛡️ Warrior → Knight (Level 10)
+- Tanky melee fighter  
+- Evolution ability: **Charge Attack**
 
-**Rogue**
-- Fast attacker with critical hit chance
-- Evolves into **Assassin** at level 10 with invisibility and bonus damage
+### 🔥 Wizard → Archmage (Level 10)
+- Ranged spellcaster  
+- Evolution ability: **Meteor Strike**
 
-### Enemy Types
+### 🗡️ Rogue → Assassin (Level 10)
+- Fast, high crit chance  
+- Evolution ability: **Invisibility + Bonus Damage**
 
-- **Goblin**: Basic enemy with standard stats
-- **Goblin Brute**: Armored tank with damage reduction (appears from wave 5)
-- **Goblin Lord**: Boss enemy that summons minions (appears every 10 waves)
+---
+
+## 👺 Enemy Types
+
+- **Goblin** — Standard melee enemy  
+- **Goblin Brute** — Armored brute that reduces incoming damage (from Wave 5)  
+- **Goblin Lord** — Summons minions; boss every 10 waves  
+
+---
 
 ## 🛠️ Technical Details
 
 ### Built With
-- **C++17**: Core game logic and systems
-- **SFML 2.5+**: Graphics, window management, and input handling
-- **Object-Oriented Design**: Inheritance-based class system for extensibility
+- **C++17**
+- **SFML 2.5+**
+- **CMake**
+- **Object-Oriented Architecture**
 
 ### Architecture Highlights
+- **Entity–Component Design** for modularity  
+- **Strategy Pattern** for attack types  
+- **Finite State Machine** for menu/game transitions  
+- **Collision System** for environment & entities  
+- **File-Based Leaderboard System** for persistence  
 
-- **Entity-Component Pattern**: Modular entity system for players and enemies
-- **Strategy Pattern**: Flexible attack system supporting multiple attack types
-- **State Machine**: Clean menu and game state management
-- **Environment System**: Collision detection and entity lifecycle management
+### Core Components
+- Player class hierarchy  
+- Enemy AI & pathfinding behavior  
+- Projectile + melee combat  
+- Wave Manager with increasing difficulty  
+- Leaderboard tracking  
 
-### Key Components
-
-- **Player Classes**: Base `Player` class with derived `Warrior`, `Wizard`, and `Rogue`
-- **Enemy AI**: Movement, attack patterns, and wave-based spawning
-- **Attack System**: Projectile, melee, and special attack implementations
-- **Wave Manager**: Exponential difficulty scaling with boss encounters
-- **Leaderboard**: File-based persistence for high scores
+---
 
 ## 📦 Installation & Setup
 
 ### Prerequisites
-- C++17 compatible compiler (GCC, Clang, MSVC)
-- SFML 2.5 or higher
-- CMake 3.10+ (recommended)
+- C++17 compiler  
+- SFML **2.5+**  
+- CMake **3.10+** (recommended)
 
 ### Build Instructions
 ```bash
@@ -77,42 +117,8 @@ Goblin Slayer is an action-packed survival game where players battle through inc
 git clone https://github.com/yourusername/goblin-slayer.git
 cd goblin-slayer
 
-# Compile (example using g++)
+# Compile (using g++)
 g++ -std=c++17 *.cpp -o GoblinSlayer -lsfml-graphics -lsfml-window -lsfml-system
 
 # Run the game
 ./GoblinSlayer
-```
-
-**Note**: Ensure `arial.ttf` font file is in the same directory as the executable for proper text rendering.
-
-## 🤝 Contributors
-
-This project was developed collaboratively by:
-- [@a1211368](https://github.com/a1211368)
-- [@a1969929](https://github.com/a1969929)
-
-## 📈 Future Enhancements
-
-- Additional character classes and evolution paths
-- Power-up system and item drops
-- Sound effects and background music
-- Multiplayer co-op mode
-- Steam leaderboard integration
-
-## 📄 License
-
-This project is available for educational and portfolio purposes. Please contact contributors for usage rights.
-
-## 🎯 Acknowledgments
-
-Built as a demonstration of object-oriented programming principles, game development patterns, and C++ proficiency with SFML.
-
----
-
-*Survive the waves. Defeat the Goblin Lords. Claim your place on the leaderboard!*
-Rogue critical hits
-Enemy swarm behavior
-Player death scenarios
-Exception handling across systems
-Memory management
